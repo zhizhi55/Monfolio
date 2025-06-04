@@ -11,7 +11,7 @@ interface ActionResponse {
 }
 
 export default async function findCollection(
-  prevState: any,
+  prevState: ActionResponse | null,
   formData: FormData,
 ): Promise<ActionResponse> {
   const walletAddress = formData.get("walletAddress");
