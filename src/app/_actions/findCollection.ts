@@ -3,13 +3,6 @@
 import { WalletAddressSchema } from "@/schema/walletAddressSchema";
 import { CollectionData } from "@/types";
 
-interface ActionResponse {
-  message: string;
-  success?: boolean;
-  data?: CollectionData[];
-  walletAddress?: string;
-}
-
 export default async function findCollection(
   prevState: ActionResponse | null,
   formData: FormData,
