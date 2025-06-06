@@ -78,3 +78,10 @@ export type CollectionData = {
   collection: Collection;
   ownership: Ownership;
 };
+
+export type ActionResponse = {
+  message: string;
+  success?: boolean;
+  data?: CollectionData[];
+  walletAddress?: string;
+}
