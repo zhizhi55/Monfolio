@@ -41,6 +41,7 @@ export default function WalletAddressForm({
               Wallet Address
             </Label>
             <Input
+              required
               id="walletAddress"
               name="walletAddress"
               placeholder="0x..."
