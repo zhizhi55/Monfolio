@@ -1,10 +1,9 @@
-import Result from "@/components/result";
+import NFTDataViewer from "@/components/NFT-data-viewer";
 
 export default async function Home() {
   return (
     <div>
-      <p>asdadad</p>
-      <Result />
+      <NFTDataViewer />
     </div>
   );
 }
