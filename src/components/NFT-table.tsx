@@ -14,7 +14,7 @@ import formatNumber from "@/lib/formatNumber";
 import calculateRarityScore from "@/lib/calculateRarityScore";
 import calculateFloorChange from "@/lib/calculateCurrentFloorChange";
 import { CollectionData } from "@/types";
-import NFTDetailDialog from "@/components/NFTDetailDialog";
+import NFTDetailDialog from "@/components/NFT-detail-modal";
 import { PLACEHOLDER_IMAGE } from "@/lib/placeholder";
 
 type NFTTableProps = {
@@ -93,7 +93,7 @@ export default function NFTTable({ processedData }: NFTTableProps) {
                 <PriceChange
                   value={calculateFloorChange(
                     item.collection.floorAskPrice?.amount?.decimal ?? 0,
-                    item.collection.floorSale?.["1day"] ?? 0,
+                    item.collection.floorSale?.["1day"] ?? 0
                   )}
                 />
               </TableCell>

@@ -14,7 +14,7 @@ import {
 import { Search, Wallet } from "lucide-react";
 import { useActionState } from "react";
 import findCollection from "@/app/_actions/findCollection";
-import WalletAddressForm from "@/components/WalletAddressForm";
+import WalletAddressForm from "@/components/wallet-address-form";
 import NFTTable from "@/components/NFT-table";
 import calculateRarityScore from "@/lib/calculateRarityScore";
 import Image from "next/image";
@@ -33,8 +33,8 @@ export default function NFTDataViewer() {
   const processedData = useMemo(() => {
     if (!hasData) return [];
 
-    const filtered = nftData.filter((item) =>
-      item.collection.name.toLowerCase().includes(searchTerm.toLowerCase()),
+    const filtered = nftData.filter(item =>
+      item.collection.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     return filtered.sort((a, b) => {
@@ -112,7 +112,7 @@ export default function NFTDataViewer() {
               <Input
                 placeholder="Search collections..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={e => setSearchTerm(e.target.value)}
                 className="max-w-xs border-gray-600 bg-gray-700 text-gray-100 placeholder-gray-400"
               />
               <Select value={sortBy} onValueChange={setSortBy}>
